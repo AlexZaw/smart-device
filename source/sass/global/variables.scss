@@ -1,0 +1,16 @@
+:root {
+  // Global
+  --font-main: "PT Mono", "Lucida Console", "Monaco", monospace;
+  --font-secondary: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+  --font-size: 16px;
+  --c-text-primary: hsla(0 0% 40% / 1);
+  --c-text-secondary: hsla(0 0% 100% / 1);
+  --bg-dark: hsla(201 34% 16% / 1);
+  --bg-light: hsla(198 100% 50% / 1);
+
+  // Hero
+  --bg-hero: var(--bg-dark);
+
+  // Logo
+  --c-logo-description: hsla(273 10% 52% / 1);
+}

@@ -1,0 +1,25 @@
+.page__body {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: var(--font-size);
+}
+
+.page__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &--header {
+    @media (min-width: 1024px) {
+      max-width: 1441px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    padding: 0 25px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 15px;
+  }
+}

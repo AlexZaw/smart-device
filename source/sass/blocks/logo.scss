@@ -1,0 +1,42 @@
+
+.logo {
+  display: flex;
+
+  &--header {
+    @media (max-width: 767px) {
+      .logo__text {
+        display: none;
+      }
+
+      img {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  }
+}
+
+.logo__text {
+  align-self: flex-end;
+  margin-left: 16px;
+  // margin-top: 5px;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.logo__name {
+  display: block;
+  font-family: var(--font-secondary);
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--c-text-secondary);
+}
+
+.logo__description {
+  font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--c-logo-description);
+}

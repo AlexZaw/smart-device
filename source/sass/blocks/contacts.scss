@@ -1,0 +1,48 @@
+.contacts {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 90px;
+  row-gap: 15px;
+  margin-left: auto;
+  margin-right: 48px;
+
+  @media (max-width: 1023px) {
+    margin-right: 0;
+    column-gap: 33px;
+  }
+
+  @media (max-width: 767px) {
+    column-gap: 23px;
+  }
+}
+
+.contacts__link {
+  font-family: inherit;
+  color: var(--c-text-secondary);
+  text-decoration: none;
+  display: inline-flex;
+
+  @media (max-width: 1023px) {
+    &--email {
+      svg {
+        width: 26px;
+        height: 19px;
+      }
+    }
+
+    &--phone {
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.contacts__link span {
+  margin-left: 16px;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
