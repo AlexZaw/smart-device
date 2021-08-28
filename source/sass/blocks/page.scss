@@ -1,4 +1,16 @@
+.page {
+  height: 100%;
+}
+
+.page__a11y-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
 .page__body {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  min-height: 100%;
   margin: 0;
   font-family: var(--font-main);
   font-size: var(--font-size);
@@ -9,7 +21,7 @@
   margin: 0 auto;
   padding: 0 15px;
 
-  &--header {
+  &--wide {
     @media (min-width: 1024px) {
       max-width: 1441px;
     }

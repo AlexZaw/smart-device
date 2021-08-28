@@ -1,6 +1,7 @@
 
 .logo {
   display: flex;
+  align-items: end;
 
   &--header {
     @media (max-width: 767px) {
@@ -14,16 +15,17 @@
       }
     }
   }
+
+  // &--footer {
+  //   @media (max-width: 767px) {
+  //     justify-content: center;
+  //   }
+  // }
 }
 
 .logo__text {
   align-self: flex-end;
   margin-left: 16px;
-  // margin-top: 5px;
-
-  @media (max-width: 767px) {
-    display: none;
-  }
 }
 
 .logo__name {
@@ -32,6 +34,10 @@
   font-size: 25px;
   font-weight: 700;
   color: var(--c-text-secondary);
+
+  &--footer {
+    color: var(--c-logo-name-accent);
+  }
 }
 
 .logo__description {

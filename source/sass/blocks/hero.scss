@@ -1,6 +1,7 @@
 .hero {
   padding-top: 33px;
   background-color: var(--bg-hero);
+  background-image: url(../../img/hero/hero-mask-bg@1x.png);
 
   @media (max-width: 1023px) {
     padding-top: 20px;

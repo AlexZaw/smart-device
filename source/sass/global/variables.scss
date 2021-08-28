@@ -7,10 +7,19 @@
   --c-text-secondary: hsla(0 0% 100% / 1);
   --bg-dark: hsla(201 34% 16% / 1);
   --bg-light: hsla(198 100% 50% / 1);
+  --c-line: hsla(115 3% 40% / 0.2);
 
   // Hero
   --bg-hero: var(--bg-dark);
 
   // Logo
   --c-logo-description: hsla(273 10% 52% / 1);
+  --c-logo-name-accent: hsla(191 34% 19% / 1);
+
+  //Contacts
+  --c-link-hover: var(--bg-light);
+
+  // Footer
+  --c-social-link-hover: var(--bg-light);
+  --c-text-footer: hsla(201 34% 16% / 0.5);
 }

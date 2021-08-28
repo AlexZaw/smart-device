@@ -22,6 +22,11 @@
   text-decoration: none;
   display: inline-flex;
 
+  &:hover,
+  &:focus {
+    color: var(--c-link-hover);
+  }
+
   @media (max-width: 1023px) {
     &--email {
       svg {
