@@ -40,3 +40,16 @@
     padding: 0 15px;
   }
 }
+
+.page__decor {
+  background: url("../img/page-figure-bg.svg");
+  background-position: 0 -30px;
+
+  @media (max-width: 1023px) {
+    background-position: -347px -86px;
+  }
+
+  @media (max-width: 767px) {
+    background-position: -683px 479px;
+  }
+}

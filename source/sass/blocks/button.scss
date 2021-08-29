@@ -9,8 +9,14 @@
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  text-decoration: none;
   color: var(--c-text-secondary);
   cursor: pointer;
   text-align: center;
-  transition: background-color 0.2s;
+  transition: box-shadow 0.1s;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 10px currentColor;
+  }
 }

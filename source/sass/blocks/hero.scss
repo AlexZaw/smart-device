@@ -132,12 +132,6 @@
       display: initial;
     }
   }
-
-  &:hover,
-  &:focus {
-    color: var(--c-link-hover);
-    background-color: var(--c-text-secondary);
-  }
 }
 
 .hero__scroll {
