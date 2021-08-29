@@ -1,4 +1,6 @@
 .button {
+  display: inline-block;
+  vertical-align: middle;
   padding: 13px 27px;
   border: 1px solid currentColor;
   border-radius: 5px;
@@ -9,4 +11,6 @@
   text-transform: uppercase;
   color: var(--c-text-secondary);
   cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s;
 }

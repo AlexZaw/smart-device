@@ -1,10 +1,15 @@
+.footer {
+  padding-top: 65px;
+  background-color: var(--bg-footer);
+}
+
 .footer a {
   color: var(--c-text-footer);
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: var(--c-social-link-hover);
+    color: var(--c-link-hover);
   }
 }
 
@@ -117,7 +122,7 @@
   &:hover,
   &:focus {
     svg {
-      fill: var(--c-social-link-hover);
+      fill: var(--c-link-hover);
     }
   }
 }

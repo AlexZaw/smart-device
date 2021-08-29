@@ -1,26 +1,18 @@
-
 .logo {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 
   &--header {
     @media (max-width: 767px) {
       .logo__text {
         display: none;
       }
-
       img {
         width: 38px;
         height: 38px;
       }
     }
   }
-
-  // &--footer {
-  //   @media (max-width: 767px) {
-  //     justify-content: center;
-  //   }
-  // }
 }
 
 .logo__text {
@@ -34,7 +26,6 @@
   font-size: 25px;
   font-weight: 700;
   color: var(--c-text-secondary);
-
   &--footer {
     color: var(--c-logo-name-accent);
   }
