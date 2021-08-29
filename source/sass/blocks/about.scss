@@ -1,12 +1,18 @@
 .about {
   padding-top: 105px;
+  padding-bottom: 92px;
 
   @media (max-width: 1023px) {
     padding-top: 55px;
+    padding-bottom: 72px;
 
     br {
       display: none;
     }
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 64px;
   }
 }
 
@@ -92,7 +98,8 @@
   }
 
   @media (max-width: 767px) {
-    margin-bottom: 18px;
+    margin-bottom: 22px;
+    font-size: 28px;
   }
 }
 
@@ -117,5 +124,9 @@
 
   @media (max-width: 1023px) {
     margin-top: 28px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 20px;
   }
 }
