@@ -14,6 +14,7 @@
 
   @media (max-width: 1023px) {
     padding-top: 20px;
+    padding-bottom: 163px;
     background-image: url("../img/hero/hero-bg-tablet@1x.png"), url("../img/hero/hero-figure-bg.svg"), url("../img/hero/hero-mask-bg-tablet@1x.png");
     background-position: right 112px, calc(100% + 200px) -40px, 0 0;
     background-size: auto, 530px 505px, cover;
@@ -21,6 +22,7 @@
 
   @media (max-width: 767px) {
     padding-top: 17px;
+    padding-bottom: 70px;
     background-image: url("../img/hero/hero-bg-mobile@1x.png"), url("../img/hero/hero-figure-bg.svg"), url("../img/hero/hero-mask-bg-mobile@1x.png");
     background-position: right 92px, calc(100% + 333px) -46px, 0 0;
     background-size: 294px 220px, 500px 483px, 100%;

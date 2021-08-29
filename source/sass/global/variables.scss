@@ -5,6 +5,7 @@
   --font-size: 16px;
   --c-text-primary: hsla(0 0% 40% / 1);
   --c-text-secondary: hsla(0 0% 100% / 1);
+  --c-text-accent: var(--bg-light);
   --bg-dark: hsla(201 34% 16% / 1);
   --bg-light: hsla(198 100% 50% / 1);
   --c-line: hsla(115 3% 40% / 0.2);
@@ -18,6 +19,9 @@
 
   //Contacts
   --c-link-hover: var(--bg-light);
+
+  //Advantages
+  --c-item-border: hsla(0 0% 92% / 1);
 
   // Footer
   --bg-footer: hsla(0 0% 98% / 1);
