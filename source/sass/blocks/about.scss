@@ -69,20 +69,6 @@
   }
 }
 
-.about__info span {
-  @media (max-width: 1023px) {
-    display: none;
-  }
-}
-
-.about__info b {
-  font-weight: 400;
-
-  @media (min-width: 1024px) {
-    display: none;
-  }
-}
-
 .about h2 {
   margin-top: 0;
   margin-bottom: 21px;
@@ -106,6 +92,15 @@
 .about p {
   line-height: 134.4%;
   color: var(--c-text-primary);
+
+  &:last-of-type {
+    @media (max-width: 1023px) {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+  }
 
   &:not(:last-of-type) {
     margin-bottom: 22px;
