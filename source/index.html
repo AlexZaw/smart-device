@@ -52,7 +52,7 @@
       <div class="hero__content">
         <h1>Печатные платы</h1>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a href="#" class="button hero__button">
+        <a href="#feedback" class="button hero__button">
           <span>Получить бесплатную консультацию</span>
           <b>Бесплатная консультация</b>
         </a>
@@ -158,7 +158,7 @@
         </ul>
       </div>
     </section>
-    <section class="feedback">
+    <section class="feedback" id="feedback">
       <h2 class="page__a11y-hidden">Обратная связь</h2>
 
       <div class="page__container">
@@ -172,7 +172,7 @@
               <div class="feedback-form__content">
                 <input type="text" name="user-name" placeholder="Имя">
                 <input type="tel" name="user-phone" placeholder="Телефон">
-                <textarea name="feedback-text" id="feedback-text" cols="30" rows="10"
+                <textarea name="feedback-text" cols="30" rows="10"
                   placeholder="Ваш вопрос"></textarea>
                   <button class="button feedback-form__button" type="submit">Задать вопрос</button>
                   <div class="feedback-form__agreement">
@@ -312,6 +312,41 @@
       </div>
     </div>
   </footer>
+  <div class="popup">
+  <div class="feedback-popup">
+      <button class="feedback-popup__close" type="button">
+      <svg width="17" height="17" fill="none" stroke="currentColor" aria-hidden="true">
+        <use xlink:href="./img/sprite_auto.svg#icon-cross">
+        </use>
+      </svg>
+    </button>
+    <form name="feedback" action="#" method="GET">
+      <fieldset>
+        <legend>
+          Закажите звонок
+        </legend>
+        <span>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
+        <div class="feedback-popup__content">
+          <input type="text" name="user-name" placeholder="Имя">
+          <input type="tel" name="user-phone" placeholder="Телефон">
+          <textarea name="feedback-text" cols="30" rows="10"
+            placeholder="Ваш вопрос"></textarea>
+            <button class="button feedback-popup__button" type="submit">Отправить</button>
+            <div class="feedback-popup__agreement">
+              <input id="feedback-popup__agree" type="checkbox" checked>
+              <div class="feedback-popup__checkbox">
+                <svg width="10" height="7" fill="none" stroke="currentColor" aria-hidden="true">
+                  <use xlink:href="./img/sprite_auto.svg#icon-check">
+                  </use>
+                </svg>
+              </div>
+              <label for="feedback-popup__agree">Я согласен на обработку персональных данных</label>
+            </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
 </body>
 
 </html>
