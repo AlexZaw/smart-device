@@ -42,7 +42,7 @@
             <span aria-hidden="true">+7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52</span>
           </a>
         </div>
-        <a class="button header__callback">Заказать звонок</a>
+        <a class="button header__callback" href="#">Заказать звонок</a>
       </div>
     </header>
     <div class="page__container page__container--hero">
@@ -117,8 +117,9 @@
                 Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
                 Печатные
                 платы и комплектующие Service Devices применяются на предприятиях Российских Железных
-                Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники
-                  России.
+                Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
+                Производители светотехники
+                России.
               </p>
               <a class="button about__button" href="#">Подробнее</a>
             </div>
@@ -152,6 +153,39 @@
             </a>
           </li>
         </ul>
+      </div>
+    </section>
+    <section class="feedback">
+      <h2 class="page__a11y-hidden">Обратная связь</h2>
+
+      <div class="page__container">
+        <div class="feedback__content">
+          <form class="feedback-form feedback__form" name="feedback" action="#" method="GET">
+            <fieldset>
+              <legend>
+                Остались вопросы? Задайте их нам!
+              </legend>
+              <span>Мы проконсультируем Вас бесплатно</span>
+              <div class="feedback-form__content">
+                <input type="text" name="user-name" placeholder="Имя">
+                <input type="tel" name="user-phone" placeholder="Телефон">
+                <textarea name="feedback-text" id="feedback-text" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+                  <button class="button feedback-form__button" type="submit">Задать вопрос</button>
+                  <div class="feedback-form__agreement">
+                    <input id="feedback-form__agree" type="checkbox" checked="">
+                    <div class="feedback-form__checkbox">
+                      <svg width="10" height="7" fill="none" stroke="currentColor" aria-hidden="true">
+                        <use xlink:href="./img/sprite_auto.svg#icon-check">
+                        </use>
+                      </svg>
+                    </div>
+                    <label for="feedback-form__agree">Я согласен на обработку персональных данных</label>
+                  </div>
+              </div>
+            </fieldset>
+
+          </form>
+        </div>
       </div>
     </section>
   </main>

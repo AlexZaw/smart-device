@@ -1,0 +1,18 @@
+.feedback {
+  padding-top: 92px;
+  padding-bottom: 116px;
+  background-image: url("../img/feedback/feedback-bg@1x.png"), url("../../img/feedback/feedback-figure-bg.svg");
+  background-repeat: no-repeat;
+  background-position: 24.86% 161px, right 0;
+  background-color: var(--bg-light);
+}
+
+.feedback__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+}
+
+.feedback__form {
+  grid-column: 2;
+}

@@ -1,5 +1,6 @@
 .services {
   padding-top: 88px;
+  padding-bottom: 127px;
   background-color: var(--bg-dark);
 
   @media (max-width: 1023px) {
@@ -84,7 +85,7 @@
   &:focus-within {
     &::after {
       background-color: transparent;
-      box-shadow: 0 0 10px currentColor;
+      box-shadow: 0 0 10px 5px currentColor;
     }
   }
 

@@ -17,6 +17,7 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0 0 10px currentColor;
+    outline: none;
+    box-shadow: 0 0 10px 5px currentColor;
   }
 }
