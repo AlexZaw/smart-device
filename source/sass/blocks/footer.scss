@@ -23,24 +23,38 @@
 
 .footer h2 {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   font-family: var(--font-secondary);
   font-size: 15px;
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.05em;
+  color: var(--c-text-footer);
   text-transform: uppercase;
 }
 
 .footer__accordion-button {
+  display: flex;
+  align-items: center;
   width: 16px;
   height: 16px;
   padding: 0;
   border: 0;
   background-color: transparent;
 
+  svg {
+    pointer-events: none;
+  }
+
   @media (min-width: 768px) {
     display: none;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: var(--c-link-hover);
+    }
   }
 }
 
@@ -71,7 +85,7 @@
 
   @media (max-width: 767px) {
     display: block;
-    padding-bottom: 23px;
+    padding-bottom: 0;
   }
 }
 
@@ -140,7 +154,9 @@
     display: grid;
     align-items: start;
     grid-template-columns: 1fr max-content;
+    row-gap: 25px;
     padding-top: 29px;
+    padding-bottom: 29px;
   }
 }
 
@@ -159,7 +175,6 @@
   }
 
   @media (max-width: 767px) {
-    display: none;
     grid-column: 1 / -1;
     padding-bottom: 29px;
   }
@@ -175,9 +190,11 @@
   @media (max-width: 767px) {
     position: relative;
     display: grid;
-    align-items: start;
     grid-template-columns: 1fr max-content;
+    align-items: center;
+    row-gap: 21px;
     padding-top: 29px;
+    padding-bottom: 29px;
 
     &::before {
       content: "";
@@ -206,9 +223,15 @@
 
   @media (max-width: 767px) {
     padding-top: 11px;
+    padding-bottom: 29px;
     grid-column: 1 / -1;
   }
 }
+
+.footer .footer__accordion--hidden {
+  display: none;
+}
+
 
 .footer__info {
   --column-gap: 73px;

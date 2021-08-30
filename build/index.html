@@ -13,9 +13,6 @@
 </head>
 
 <body class="page__body">
-  <div class="grid">
-    <div class="grid-overlay"></div>
-  </div>
   <section class="hero">
     <header class="header">
       <div class="header__content page__container page__container--wide">
@@ -42,7 +39,7 @@
             <span aria-hidden="true">+7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52</span>
           </a>
         </div>
-        <a class="button header__callback" href="#">Заказать звонок</a>
+        <a class="button header__callback" data-popup="feedback-popup" href="#">Заказать звонок</a>
       </div>
     </header>
     <div class="page__container page__container--hero">
@@ -222,14 +219,14 @@
         </div>
         <nav class="footer__nav">
           <h2>Разделы сайта</h2>
-          <button class="footer__accordion-button" type="button" aria-label="Просмотреть список" aria-expanded="false">
+          <button class="footer__accordion-button" type="button" data-accordion="nav" aria-label="Просмотреть список" aria-expanded="false" hidden="">
             <svg width="16" height="16" aria-hidden="true">
-              <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--active" xlink:href="./img/sprite_auto.svg#icon-plus"></use>
-              <use width="16" height="16" class="footer__accordion-icon" xlink:href="./img/sprite_auto.svg#icon-minus">
+              <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--plus footer__accordion-icon--active" xlink:href="./img/sprite_auto.svg#icon-plus"></use>
+              <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--minus" xlink:href="./img/sprite_auto.svg#icon-minus">
               </use>
             </svg>
           </button>
-          <ul>
+          <ul class="footer__accordion footer__accordion--nav">
             <li>
               <a href="#">
                 О компании
@@ -269,14 +266,14 @@
         </nav>
         <div class="footer__contacts">
           <h2>Наш офис</h2>
-          <button class="footer__accordion-button" type="button" aria-label="Просмотреть список" aria-expanded="false">
+          <button class="footer__accordion-button" type="button" data-accordion="contacts" aria-label="Просмотреть список" aria-expanded="false" hidden="">
             <svg width="16" height="16" aria-hidden="true">
-              <use width="16" height="16" class="footer__accordion-icon" xlink:href="./img/sprite_auto.svg#icon-plus">
+              <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--plus footer__accordion-icon--active" xlink:href="./img/sprite_auto.svg#icon-plus">
               </use>
-              <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--active" xlink:href="./img/sprite_auto.svg#icon-minus"></use>
+              <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--minus" xlink:href="./img/sprite_auto.svg#icon-minus"></use>
             </svg>
           </button>
-          <ul>
+          <ul class="footer__accordion footer__accordion--contacts">
             <li>
               г. Мытищи, Олимпийский <br aria-hidden="true"> проспект, д.10
             </li>
@@ -306,9 +303,10 @@
       </div>
     </div>
   </footer>
-  <div class="popup" hidden="">
+  <template id="feedback-popup">
+  <div class="popup">
   <div class="feedback-popup">
-      <button class="feedback-popup__close" type="button">
+      <button class="feedback-popup__close popup__close" type="button">
       <svg width="17" height="17" fill="none" stroke="currentColor" aria-hidden="true">
         <use xlink:href="./img/sprite_auto.svg#icon-cross">
         </use>
@@ -340,7 +338,9 @@
     </form>
   </div>
 </div>
+</template>
 <script src="./js/vendor.js"></script>
+<script src="./js/main.js"></script>
 
 </body>
 

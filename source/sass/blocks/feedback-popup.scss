@@ -32,6 +32,10 @@
   }
 }
 
+.feedback-popup__close svg {
+  pointer-events: none;
+}
+
 .feedback-popup fieldset {
   margin: 0;
   padding: 0;
