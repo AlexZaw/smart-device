@@ -1,7 +1,16 @@
 .feedback {
   padding-top: 92px;
   padding-bottom: 114px;
-  background-image: url("../img/feedback/feedback-bg@1x.png"), url("../../img/feedback/feedback-figure-bg.svg");
+
+  .no-webp & {
+    background-image: image-set(url("../img/feedback/feedback-bg@2x.png") 2x, url("../img/feedback/feedback-bg@1x.png") 1x),
+      url("../../img/feedback/feedback-figure-bg.svg");
+  }
+
+  .webp & {
+    background-image: image-set(url("../img/feedback/feedback-bg@2x.webp") 2x, url("../img/feedback/feedback-bg@1x.webp") 1x),
+      url("../../img/feedback/feedback-figure-bg.svg");
+  }
   background-repeat: no-repeat;
   background-position: 24.86% 161px, right 0;
   background-color: var(--bg-light);
@@ -10,6 +19,14 @@
     padding-top: 80px;
     padding-bottom: 106px;
     background-image: none;
+
+    .no-webp & {
+      background-image: none;
+    }
+
+    .webp & {
+      background-image: none;
+    }
   }
 
   @media (max-width: 767px) {

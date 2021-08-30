@@ -75,15 +75,33 @@
   }
 
   &--production {
-    background-image: url("../img/service/production@1x.png");
+    .no-webp & {
+      background-image: image-set(url("../img/service/production@2x.png") 2x, url("../img/service/production@1x.png") 1x);
+    }
+
+    .webp & {
+      background-image: image-set(url("../img/service/production@2x.webp") 2x, url("../img/service/production@1x.webp") 1x);
+    }
   }
 
   &--install {
-    background-image: url("../img/service/install@1x.png");
+    .no-webp & {
+      background-image: image-set(url("../img/service/install@1x.png") 2x, url("../img/service/install@1x.png") 1x);
+    }
+
+    .webp & {
+      background-image: image-set(url("../img/service/install@2x.webp") 2x, url("../img/service/install@1x.webp") 1x);
+    }
   }
 
   &--components {
-    background-image: url("../img/service/components@1x.png");
+    .no-webp & {
+      background-image: image-set(url("../img/service/components@1x.png") 2x, url("../img/service/components@1x.png") 1x);
+    }
+
+    .webp & {
+      background-image: image-set(url("../img/service/components@2x.webp") 2x, url("../img/service/components@1x.webp") 1x);
+    }
   }
 
   &:hover,
@@ -100,15 +118,33 @@
     padding-top: 40px;
 
     &--production {
-      background-image: url("../img/service/production-tablet@1x.png");
+      .no-webp & {
+        background-image: image-set(url("../img/service/production-tablet@1x.png") 2x, url("../img/service/production-tablet@1x.png") 1x);
+      }
+
+      .webp & {
+        background-image: image-set(url("../img/service/production-tablet@2x.webp") 2x, url("../img/service/production-tablet@1x.webp") 1x);
+      }
     }
 
     &--install {
-      background-image: url("../img/service/install-tablet@1x.png");
+      .no-webp & {
+        background-image: image-set(url("../img/service/install-tablet@1x.png") 2x, url("../img/service/install-tablet@1x.png") 1x);
+      }
+
+      .webp & {
+        background-image: image-set(url("../img/service/install-tablet@2x.webp") 2x, url("../img/service/install-tablet@1x.webp") 1x);
+      }
     }
 
     &--components {
-      background-image: url("../img/service/components-tablet@1x.png");
+      .no-webp & {
+        background-image: image-set(url("../img/service/components-tablet@1x.png") 2x, url("../img/service/components-tablet@1x.png") 1x);
+      }
+
+      .webp & {
+        background-image: image-set(url("../img/service/components-tablet@2x.webp") 2x, url("../img/service/components-tablet@1x.webp") 1x);
+      }
     }
   }
 
@@ -117,15 +153,33 @@
     padding-left: 35px;
 
     &--production {
-      background-image: url("../img/service/production-mobile@1x.png");
+      .no-webp & {
+        background-image: image-set(url("../img/service/components-mobile@1x.png") 2x, url("../img/service/components-mobile@1x.png") 1x);
+      }
+
+      .webp & {
+        background-image: image-set(url("../img/service/components-mobile@2x.webp") 2x, url("../img/service/components-mobile@1x.webp") 1x);
+      }
     }
 
     &--install {
-      background-image: url("../img/service/install-mobile@1x.png");
+      .no-webp & {
+        background-image: image-set(url("../img/service/install-mobile@1x.png") 2x, url("../img/service/install-mobile@1x.png") 1x);
+      }
+
+      .webp & {
+        background-image: image-set(url("../img/service/install-mobile@2x.webp") 2x, url("../img/service/install-mobile@1x.webp") 1x);
+      }
     }
 
     &--components {
-      background-image: url("../img/service/components-mobile@1x.png");
+      .no-webp & {
+        background-image: image-set(url("../img/service/components-mobile@1x.png") 2x, url("../img/service/components-mobile@1x.png") 1x);
+      }
+
+      .webp & {
+        background-image: image-set(url("../img/service/components-mobile@2x.webp") 2x, url("../img/service/components-mobile@1x.webp") 1x);
+      }
     }
   }
 }

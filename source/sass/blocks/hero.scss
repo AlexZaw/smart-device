@@ -3,9 +3,22 @@
   padding-top: 33px;
   padding-bottom: 275px;
   background-color: var(--bg-hero);
-  background-image: url("../img/hero/hero-bg@1x.png"), url("../img/hero/hero-figure-bg.svg"), url("../img/hero/hero-mask-bg@1x.png");
   background-repeat: no-repeat;
   background-position: calc(100% - 177px) 258px, calc(100% - 219px) 118px, 0 0;
+  background-size: auto, auto, 100%;
+
+  .no-webp & {
+    background-image: image-set(url("../img/hero/hero-bg@2x.png") 2x, url("../img/hero/hero-bg@1x.png") 1x),
+      url("../img/hero/hero-figure-bg.svg"),
+      image-set(url("../img/hero/hero-mask-bg@2x.png") 2x, url("../img/hero/hero-mask-bg@1x.png") 1x);
+  }
+
+  .webp & {
+    background-image: image-set(url("../img/hero/hero-bg@2x.webp") 2x, url("../img/hero/hero-bg@1x.webp") 1x),
+      url("../img/hero/hero-figure-bg.svg"),
+      image-set(url("../img/hero/hero-mask-bg@2x.webp") 2x, url("../img/hero/hero-mask-bg@1x.webp") 1x);
+  }
+
 
   @media (max-width: 1536px) {
     background-size: 40%, 40%, cover;
@@ -15,17 +28,39 @@
   @media (max-width: 1023px) {
     padding-top: 20px;
     padding-bottom: 163px;
-    background-image: url("../img/hero/hero-bg-tablet@1x.png"), url("../img/hero/hero-figure-bg.svg"), url("../img/hero/hero-mask-bg-tablet@1x.png");
     background-position: right 112px, calc(100% + 200px) -40px, 0 0;
     background-size: auto, 530px 505px, cover;
+
+    .no-webp & {
+      background-image: image-set(url("../img/hero/hero-bg-tablet@2x.png") 2x, url("../img/hero/hero-bg-tablet@1x.png") 1x),
+        url("../img/hero/hero-figure-bg.svg"),
+        image-set(url("../img/hero/hero-mask-bg-tablet@2x.png") 2x, url("../img/hero/hero-mask-bg-tablet@1x.png") 1x);
+    }
+
+    .webp & {
+      background-image: image-set(url("../img/hero/hero-bg-tablet@2x.webp") 2x, url("../img/hero/hero-bg-tablet@1x.webp") 1x),
+        url("../img/hero/hero-figure-bg.svg"),
+        image-set(url("../img/hero/hero-mask-bg-tablet@2x.webp") 2x, url("../img/hero/hero-mask-bg-tablet@1x.webp") 1x);
+    }
   }
 
   @media (max-width: 767px) {
     padding-top: 17px;
     padding-bottom: 70px;
-    background-image: url("../img/hero/hero-bg-mobile@1x.png"), url("../img/hero/hero-figure-bg.svg"), url("../img/hero/hero-mask-bg-mobile@1x.png");
     background-position: right 92px, calc(100% + 333px) -46px, 0 0;
     background-size: 294px 220px, 500px 483px, 100%;
+
+    .no-webp & {
+      background-image: image-set(url("../img/hero/hero-bg-mobile@2x.png") 2x, url("../img/hero/hero-bg-mobile@1x.png") 1x),
+        url("../img/hero/hero-figure-bg.svg"),
+        image-set(url("../img/hero/hero-mask-bg-mobile@2x.png") 2x, url("../img/hero/hero-mask-bg-mobile@1x.png") 1x);
+    }
+
+    .webp & {
+      background-image: image-set(url("../img/hero/hero-bg-mobile@2x.webp") 2x, url("../img/hero/hero-bg-mobile@1x.webp") 1x),
+        url("../img/hero/hero-figure-bg.svg"),
+        image-set(url("../img/hero/hero-mask-bg-mobile@2x.webp") 2x, url("../img/hero/hero-mask-bg-mobile@1x.webp") 1x);
+    }
   }
 }
 
