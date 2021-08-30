@@ -1,6 +1,14 @@
 .footer {
   padding-top: 65px;
   background-color: var(--bg-footer);
+
+  @media (max-width: 1023px) {
+    padding-top: 19px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 46px;
+  }
 }
 
 .footer a {

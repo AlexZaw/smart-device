@@ -70,11 +70,11 @@ svg {
   background-size: calc(100% + var(--grid-gap)) 100%;
 
   @media (max-width: 1023px) {
-    --grid-gap: 25px;
+    --grid-indent: 25px;
   }
 
-  @media (max-width: 769px) {
+  @media (max-width: 767px) {
     --columns-count: 6;
-    --grid-gap: 15px;
+    --grid-indent: 15px;
   }
 }

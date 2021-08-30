@@ -100,6 +100,10 @@
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
     }
+
+    @media (max-width: 767px) {
+      -webkit-line-clamp: 8;
+    }
   }
 
   &:not(:last-of-type) {
