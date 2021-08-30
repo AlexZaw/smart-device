@@ -2,6 +2,8 @@
   "extends": "stylelint-config-htmlacademy",
   "rules": {
     "declaration-no-important": true,
-    "indentation": [2, {"ignore": ["inside-parens"]}]
+    "indentation": [2, {"ignore": ["inside-parens"]}],
+    "property-no-vendor-prefix": [true, {ignoreProperties: ["box-orient", "line-clamp"]}],
+    "value-no-vendor-prefix": [true, {"ignoreValues": ["box"]}]
   }
 }
