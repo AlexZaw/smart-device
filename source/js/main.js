@@ -181,6 +181,16 @@ const switchPopupElement = (evt) =>{
   }
 };
 
+const checkPopupCoords = () =>{
+  const formWrapper = document.querySelector('.feedback-popup');
+  if(parseInt(getComputedStyle(formWrapper).height, 10) > document.documentElement.clientHeight){
+    formWrapper.classList.add('feedback-popup--fixed');
+  } else {
+    formWrapper.classList.remove('feedback-popup--fixed');
+
+  }
+};
+
 const popupListeners = (popup) =>{
   popup.querySelectorAll('.masked').forEach((el) => setMaskedInputListener(el));
   popup.querySelectorAll('.prefixed').forEach((el) => setPrefixedInputListener(el));
@@ -188,7 +198,9 @@ const popupListeners = (popup) =>{
   document.addEventListener('keydown', closePopup);
   popup.addEventListener('click', closePopup);
   popup.addEventListener('keydown', switchPopupElement);
+  window.addEventListener('resize', checkPopupCoords);
 };
+
 
 const showPopup = (evt) => {
   evt.preventDefault();
@@ -197,17 +209,12 @@ const showPopup = (evt) => {
   if(template){
     const popup = template.content.querySelector('.popup').cloneNode(true);
     const form = popup.querySelector('form');
-    const formWrapper = popup.querySelector('.feedback-popup');
-
     popup.classList.add('active-popup');
     popupListeners(popup);
     fillForm(form);
     document.body.append(popup);
     popup.querySelector('[name="user-name"]').focus();
-    if(parseInt(getComputedStyle(formWrapper).height, 10) > document.documentElement.clientHeight){
-      formWrapper.classList.add('feedback-popup--fixed');
-    }
-
+    checkPopupCoords();
     bodyFixPosition();
   }
 };
