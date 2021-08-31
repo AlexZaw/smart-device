@@ -9,7 +9,7 @@
   <link rel="preload" href="./fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="./fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="./fonts/roboto-v27-cyrillic-500.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/style.min.css?v2">
 </head>
 
 <body class="page__body">
@@ -98,7 +98,7 @@
           </ul>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="page__container">
           <div class="about__content">
             <div class="about__decor">
@@ -124,7 +124,7 @@
         </div>
       </section>
     </div>
-    <section class="services">
+    <section class="services" id="services">
       <div class="page__container">
         <h2>Service Device предлагает следующие товары и услуги</h2>
         <ul>
@@ -157,19 +157,19 @@
 
       <div class="page__container">
         <div class="feedback__content">
-          <form class="feedback-form feedback__form" name="feedback" action="#" method="GET">
+          <form class="feedback-form feedback__form" name="feedback" action="https://echo.htmlacademy.ru" method="GET">
             <fieldset>
               <legend>
                 Остались вопросы? Задайте их нам!
               </legend>
               <span>Мы проконсультируем Вас бесплатно</span>
               <div class="feedback-form__content">
-                <input type="text" name="user-name" placeholder="Имя">
-                <input type="tel" name="user-phone" placeholder="Телефон">
-                <textarea name="feedback-text" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+                <input type="text" name="user-name" placeholder="Имя" required="" autocomplete="off">
+                <input class="masked prefixed" type="tel" name="user-phone" data-pattern="+*(***)***-**-**" data-prefix="+7(" data-error="Номер телефона должен быть вида +7(123)456-78-90" placeholder="Телефон" required="" autocomplete="off">
+                <textarea name="user-feedback" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
                 <button class="button feedback-form__button" type="submit">Задать вопрос</button>
                 <div class="feedback-form__agreement">
-                  <input id="feedback-form__agree" type="checkbox" checked="">
+                  <input id="feedback-form__agree" type="checkbox" checked="" required="">
                   <div class="feedback-form__checkbox">
                     <svg width="10" height="7" fill="none" stroke="currentColor" aria-hidden="true">
                       <use xlink:href="./img/sprite_auto.svg#icon-check">
@@ -180,7 +180,6 @@
                 </div>
               </div>
             </fieldset>
-
           </form>
         </div>
       </div>
@@ -230,12 +229,12 @@
           </div>
           <ul class="footer__accordion footer__accordion--nav">
             <li>
-              <a href="#">
+              <a href="#about">
                 О компании
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#services">
                 Продукты
               </a>
             </li>
@@ -316,19 +315,19 @@
             </use>
           </svg>
         </button>
-        <form name="feedback" action="#" method="GET">
+        <form name="feedback" action="https://echo.htmlacademy.ru" method="GET">
           <fieldset>
             <legend>
               Закажите звонок
             </legend>
             <span>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
             <div class="feedback-popup__content">
-              <input type="text" name="user-name" placeholder="Имя">
-              <input type="tel" name="user-phone" placeholder="Телефон">
-              <textarea name="feedback-text" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+              <input type="text" name="user-name" placeholder="Имя" autocomplete="off" required="">
+              <input class="masked prefixed" type="tel" name="user-phone" data-pattern="+*(***)***-**-**" data-prefix="+7(" placeholder="Телефон" required="" autocomplete="off">
+              <textarea name="user-feedback" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
               <button class="button feedback-popup__button" type="submit">Отправить</button>
               <div class="feedback-popup__agreement">
-                <input id="feedback-popup__agree" type="checkbox" checked="">
+                <input id="feedback-popup__agree" type="checkbox" checked="" required="">
                 <div class="feedback-popup__checkbox">
                   <svg width="10" height="7" fill="none" stroke="currentColor" aria-hidden="true">
                     <use xlink:href="./img/sprite_auto.svg#icon-check">

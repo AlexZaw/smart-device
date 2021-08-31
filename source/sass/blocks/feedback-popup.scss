@@ -1,11 +1,18 @@
 .feedback-popup {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100%;
   max-width: 490px;
-  margin: 0 auto;
   padding: 29px 40px 36px;
   color: var(--c-text-secondary);
   background-color: var(--bg-light);
+  transform: translate(-50%, -50%);
+
+  &--fixed {
+    top: 0;
+    transform: translate(-50%, 0%);
+  }
 
   @media (max-width: 767px) {
     max-width: 100%;

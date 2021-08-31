@@ -154,7 +154,7 @@
 
   @media (max-width: 767px) {
     &:hover,
-    &:focus {
+    &:focus-within {
       color: var(--c-link-hover);
     }
   }
