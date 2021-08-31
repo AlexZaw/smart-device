@@ -21,26 +21,24 @@
   }
 }
 
-.footer h2 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: var(--font-secondary);
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: 0.05em;
-  color: var(--c-text-footer);
-  text-transform: uppercase;
-}
-
 .footer__accordion-button {
   display: flex;
   align-items: center;
   width: 16px;
   height: 16px;
   padding: 0;
+  color: currentColor;
   border: 0;
   background-color: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
 
   svg {
     pointer-events: none;
@@ -48,13 +46,6 @@
 
   @media (min-width: 768px) {
     display: none;
-  }
-
-  &:hover,
-  &:focus {
-    svg {
-      fill: var(--c-link-hover);
-    }
   }
 }
 
@@ -149,14 +140,39 @@
   }
 }
 
-.footer__nav {
+.footer__header-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+  color: var(--c-header-footer);
+
+  svg {
+    pointer-events: none;
+  }
+
   @media (max-width: 767px) {
-    display: grid;
-    align-items: start;
-    grid-template-columns: 1fr max-content;
-    row-gap: 25px;
+    &:hover,
+    &:focus {
+      color: var(--c-link-hover);
+    }
+  }
+}
+
+.footer h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 26px;
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @media (max-width: 767px) {
     padding-top: 29px;
-    padding-bottom: 29px;
   }
 }
 
@@ -192,9 +208,6 @@
     display: grid;
     grid-template-columns: 1fr max-content;
     align-items: center;
-    row-gap: 21px;
-    padding-top: 29px;
-    padding-bottom: 29px;
 
     &::before {
       content: "";
@@ -222,14 +235,16 @@
   line-height: 25px;
 
   @media (max-width: 767px) {
-    padding-top: 11px;
-    padding-bottom: 29px;
+    padding-top: 7px;
+    padding-bottom: 27px;
     grid-column: 1 / -1;
   }
 }
 
 .footer .footer__accordion--hidden {
-  display: none;
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 
 

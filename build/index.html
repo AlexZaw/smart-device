@@ -167,17 +167,17 @@
                 <input type="text" name="user-name" placeholder="Имя">
                 <input type="tel" name="user-phone" placeholder="Телефон">
                 <textarea name="feedback-text" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
-                  <button class="button feedback-form__button" type="submit">Задать вопрос</button>
-                  <div class="feedback-form__agreement">
-                    <input id="feedback-form__agree" type="checkbox" checked="">
-                    <div class="feedback-form__checkbox">
-                      <svg width="10" height="7" fill="none" stroke="currentColor" aria-hidden="true">
-                        <use xlink:href="./img/sprite_auto.svg#icon-check">
-                        </use>
-                      </svg>
-                    </div>
-                    <label for="feedback-form__agree">Я согласен на обработку персональных данных</label>
+                <button class="button feedback-form__button" type="submit">Задать вопрос</button>
+                <div class="feedback-form__agreement">
+                  <input id="feedback-form__agree" type="checkbox" checked="">
+                  <div class="feedback-form__checkbox">
+                    <svg width="10" height="7" fill="none" stroke="currentColor" aria-hidden="true">
+                      <use xlink:href="./img/sprite_auto.svg#icon-check">
+                      </use>
+                    </svg>
                   </div>
+                  <label for="feedback-form__agree">Я согласен на обработку персональных данных</label>
+                </div>
               </div>
             </fieldset>
 
@@ -218,14 +218,16 @@
           </div>
         </div>
         <nav class="footer__nav">
-          <h2>Разделы сайта</h2>
-          <button class="footer__accordion-button" type="button" data-accordion="nav" aria-label="Просмотреть список" aria-expanded="false" hidden="">
-            <svg width="16" height="16" aria-hidden="true">
-              <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--plus footer__accordion-icon--active" xlink:href="./img/sprite_auto.svg#icon-plus"></use>
-              <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--minus" xlink:href="./img/sprite_auto.svg#icon-minus">
-              </use>
-            </svg>
-          </button>
+          <div class="footer__header-wrapper">
+            <h2>Разделы сайта</h2>
+            <button class="footer__accordion-button" type="button" data-accordion="nav" aria-label="Просмотреть список" aria-expanded="false" hidden="">
+              <svg width="16" height="16" aria-hidden="true" fill="currentColor">
+                <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--plus footer__accordion-icon--active" xlink:href="./img/sprite_auto.svg#icon-plus"></use>
+                <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--minus" xlink:href="./img/sprite_auto.svg#icon-minus">
+                </use>
+              </svg>
+            </button>
+          </div>
           <ul class="footer__accordion footer__accordion--nav">
             <li>
               <a href="#">
@@ -265,14 +267,16 @@
           </ul>
         </nav>
         <div class="footer__contacts">
-          <h2>Наш офис</h2>
-          <button class="footer__accordion-button" type="button" data-accordion="contacts" aria-label="Просмотреть список" aria-expanded="false" hidden="">
-            <svg width="16" height="16" aria-hidden="true">
-              <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--plus footer__accordion-icon--active" xlink:href="./img/sprite_auto.svg#icon-plus">
-              </use>
-              <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--minus" xlink:href="./img/sprite_auto.svg#icon-minus"></use>
-            </svg>
-          </button>
+          <div class="footer__header-wrapper">
+            <h2>Наш офис</h2>
+            <button class="footer__accordion-button" type="button" data-accordion="contacts" aria-label="Просмотреть список" aria-expanded="false" hidden="">
+              <svg width="16" height="16" aria-hidden="true" fill="currentColor">
+                <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--plus footer__accordion-icon--active" xlink:href="./img/sprite_auto.svg#icon-plus">
+                </use>
+                <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--minus" xlink:href="./img/sprite_auto.svg#icon-minus"></use>
+              </svg>
+            </button>
+          </div>
           <ul class="footer__accordion footer__accordion--contacts">
             <li>
               г. Мытищи, Олимпийский <br aria-hidden="true"> проспект, д.10
@@ -304,43 +308,43 @@
     </div>
   </footer>
   <template id="feedback-popup">
-  <div class="popup">
-  <div class="feedback-popup">
-      <button class="feedback-popup__close popup__close" type="button">
-      <svg width="17" height="17" fill="none" stroke="currentColor" aria-hidden="true">
-        <use xlink:href="./img/sprite_auto.svg#icon-cross">
-        </use>
-      </svg>
-    </button>
-    <form name="feedback" action="#" method="GET">
-      <fieldset>
-        <legend>
-          Закажите звонок
-        </legend>
-        <span>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
-        <div class="feedback-popup__content">
-          <input type="text" name="user-name" placeholder="Имя">
-          <input type="tel" name="user-phone" placeholder="Телефон">
-          <textarea name="feedback-text" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
-            <button class="button feedback-popup__button" type="submit">Отправить</button>
-            <div class="feedback-popup__agreement">
-              <input id="feedback-popup__agree" type="checkbox" checked="">
-              <div class="feedback-popup__checkbox">
-                <svg width="10" height="7" fill="none" stroke="currentColor" aria-hidden="true">
-                  <use xlink:href="./img/sprite_auto.svg#icon-check">
-                  </use>
-                </svg>
+    <div class="popup">
+      <div class="feedback-popup">
+        <button class="feedback-popup__close popup__close" type="button">
+          <svg width="17" height="17" fill="none" stroke="currentColor" aria-hidden="true">
+            <use xlink:href="./img/sprite_auto.svg#icon-cross">
+            </use>
+          </svg>
+        </button>
+        <form name="feedback" action="#" method="GET">
+          <fieldset>
+            <legend>
+              Закажите звонок
+            </legend>
+            <span>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
+            <div class="feedback-popup__content">
+              <input type="text" name="user-name" placeholder="Имя">
+              <input type="tel" name="user-phone" placeholder="Телефон">
+              <textarea name="feedback-text" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+              <button class="button feedback-popup__button" type="submit">Отправить</button>
+              <div class="feedback-popup__agreement">
+                <input id="feedback-popup__agree" type="checkbox" checked="">
+                <div class="feedback-popup__checkbox">
+                  <svg width="10" height="7" fill="none" stroke="currentColor" aria-hidden="true">
+                    <use xlink:href="./img/sprite_auto.svg#icon-check">
+                    </use>
+                  </svg>
+                </div>
+                <label for="feedback-popup__agree">Я согласен на обработку персональных данных</label>
               </div>
-              <label for="feedback-popup__agree">Я согласен на обработку персональных данных</label>
             </div>
-        </div>
-      </fieldset>
-    </form>
-  </div>
-</div>
-</template>
-<script src="./js/vendor.js"></script>
-<script src="./js/main.js"></script>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </template>
+  <script src="./js/vendor.js"></script>
+  <script src="./js/main.js"></script>
 
 </body>
 
