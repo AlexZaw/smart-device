@@ -95,16 +95,13 @@
 }
 
 .feedback-form__agreement {
-  margin-top: 12px;
+  margin-top: 10px;
   margin-left: 8px;
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 15px;
   font-size: 14px;
 
   @media (max-width: 767px) {
-    margin-top: 2px;
-    margin-left: 4px;
+    margin-top: 3px;
+    margin-left: 1px;
   }
 
   &:hover,
@@ -115,18 +112,24 @@
   }
 }
 
+.feedback-form label {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 15px;
+  cursor: pointer;
+}
+
 .feedback-form [type="checkbox"] {
   position: fixed;
   transform: scale(0);
 
-  &:not(:checked) + .feedback-form__checkbox svg {
+  &:not(:checked) + label svg {
     display: none;
   }
 }
 
 .feedback-form__checkbox {
-  justify-self: end;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 16px;

@@ -114,9 +114,6 @@
 .feedback-popup__agreement {
   max-width: 90%;
   margin-top: 6px;
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 30px;
   font-size: 14px;
 
   &:hover,
@@ -127,11 +124,18 @@
   }
 }
 
+.feedback-popup label {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 30px;
+  cursor: pointer;
+}
+
 .feedback-popup [type="checkbox"] {
   position: fixed;
   transform: scale(0);
 
-  &:not(:checked) + .feedback-popup__checkbox svg {
+  &:not(:checked) + label svg {
     display: none;
   }
 }

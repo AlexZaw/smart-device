@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Производство и монтаж, поставка комплектующих, блоков и модулей">
   <title>Smart Device</title>
   <link rel="preload" href="./fonts/pt-mono-v8-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2"
@@ -174,14 +175,15 @@
                 <textarea name="user-feedback" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
                 <button class="button feedback-form__button" type="submit">Задать вопрос</button>
                 <div class="feedback-form__agreement">
-                  <input id="feedback-form__agree" type="checkbox" checked required>
-                  <div class="feedback-form__checkbox">
-                    <svg width="10" height="7" fill="none" stroke="currentColor" aria-hidden="true">
-                      <use xlink:href="./img/sprite_auto.svg#icon-check">
-                      </use>
-                    </svg>
-                  </div>
-                  <label for="feedback-form__agree">Я согласен на обработку персональных данных</label>
+                  <input id="feedback-form__agree" type="checkbox" name="agree" checked required>
+                  <label for="feedback-form__agree">
+                    <div class="feedback-form__checkbox">
+                      <svg width="10" height="7" fill="none" stroke="currentColor" aria-hidden="true">
+                        <use xlink:href="./img/sprite_auto.svg#icon-check">
+                        </use>
+                      </svg>
+                    </div>
+                    Я согласен на обработку персональных данных</label>
                 </div>
               </div>
             </fieldset>
@@ -335,14 +337,15 @@
               <textarea name="user-feedback" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
               <button class="button feedback-popup__button" type="submit">Отправить</button>
               <div class="feedback-popup__agreement">
-                <input id="feedback-popup__agree" type="checkbox" checked required>
-                <div class="feedback-popup__checkbox">
-                  <svg width="10" height="7" fill="none" stroke="currentColor" aria-hidden="true">
-                    <use xlink:href="./img/sprite_auto.svg#icon-check">
-                    </use>
-                  </svg>
-                </div>
-                <label for="feedback-popup__agree">Я согласен на обработку персональных данных</label>
+                <input id="feedback-popup__agree" type="checkbox" name="agree" checked required>
+                <label for="feedback-popup__agree">
+                  <div class="feedback-popup__checkbox">
+                    <svg width="10" height="7" fill="none" stroke="currentColor" aria-hidden="true">
+                      <use xlink:href="./img/sprite_auto.svg#icon-check">
+                      </use>
+                    </svg>
+                  </div>
+                  Я согласен на обработку персональных данных</label>
               </div>
             </div>
           </fieldset>
