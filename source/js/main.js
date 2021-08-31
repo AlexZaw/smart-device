@@ -5,6 +5,8 @@ const accordionLists = document.querySelectorAll('.footer__accordion');
 const acoordionPrefix = 'footer__accordion';
 const activeAccordionIcon = 'footer__accordion-icon--active';
 const feedbackForm = document.forms.feedback;
+const masked = document.querySelectorAll('.masked');
+const prefixed = document.querySelectorAll('.prefixed');
 const userData = {
   name: '',
   phone: '',
@@ -37,8 +39,6 @@ const fillForm = (form) => {
 };
 
 const isEscKey = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
-const masked = document.querySelectorAll('.masked');
-const prefixed = document.querySelectorAll('.prefixed');
 
 const maskInput = (evt) => {
   const input = evt.target;
@@ -153,36 +153,63 @@ const onFormSubmit = (evt) =>{
 
 
 const closePopup = (evt) =>{
-  if (isEscKey(evt) || evt.target.classList.contains('popup__close')
-  || evt.target.classList.contains('active-popup')) {
+  if ( isEscKey(evt) || (evt.type === 'click' && evt.target.classList.contains('popup__close')
+  || evt.target.classList.contains('active-popup')) ) {
     document.querySelector('.active-popup').remove();
     document.removeEventListener('keydown', closePopup);
     bodyUnfixPosition();
   }
 };
 
-const showPopup = (evt) => {
-  evt.preventDefault();
-  const target = evt.target;
-  const template = document.querySelector(`#${target.dataset.popup}`).content.querySelector('.popup');
-  const popup = template.cloneNode(true);
-  const form = popup.querySelector('form');
-  const formWrapper = popup.querySelector('.feedback-popup');
+const switchPopupElement = (evt) =>{
+  const popup = evt.target.closest('.popup');
+  const elements = [...popup.querySelector('form').elements].filter((el) =>el.tagName !== 'FIELDSET');
+  const closeButton = popup.querySelector('.popup__close');
 
-  popup.classList.add('active-popup');
+  if (evt.key === 'Tab') {
+    if (evt.shiftKey) {
+      if (evt.target === elements[0]) {
+        evt.preventDefault();
+        closeButton.focus();
+      }
+    } else {
+      if (evt.target === closeButton) {
+        evt.preventDefault();
+        elements[0].focus();
+      }
+    }
+  }
+};
+
+const popupListeners = (popup) =>{
   popup.querySelectorAll('.masked').forEach((el) => setMaskedInputListener(el));
   popup.querySelectorAll('.prefixed').forEach((el) => setPrefixedInputListener(el));
   popup.querySelector('[type="submit"]').addEventListener('click', onFormSubmit);
   document.addEventListener('keydown', closePopup);
   popup.addEventListener('click', closePopup);
-  fillForm(form);
-  document.body.append(popup);
-  popup.querySelector('[name="user-name"]').focus();
-  if(parseInt(getComputedStyle(formWrapper).height, 10) > document.documentElement.clientHeight){
-    formWrapper.classList.add('feedback-popup--fixed');
-  }
+  popup.addEventListener('keydown', switchPopupElement);
+};
 
-  bodyFixPosition();
+const showPopup = (evt) => {
+  evt.preventDefault();
+  const target = evt.target;
+  const template = document.querySelector(`#${target.dataset.popup}`);
+  if(template){
+    const popup = template.content.querySelector('.popup').cloneNode(true);
+    const form = popup.querySelector('form');
+    const formWrapper = popup.querySelector('.feedback-popup');
+
+    popup.classList.add('active-popup');
+    popupListeners(popup);
+    fillForm(form);
+    document.body.append(popup);
+    popup.querySelector('[name="user-name"]').focus();
+    if(parseInt(getComputedStyle(formWrapper).height, 10) > document.documentElement.clientHeight){
+      formWrapper.classList.add('feedback-popup--fixed');
+    }
+
+    bodyFixPosition();
+  }
 };
 
 if(callbackButton){
@@ -198,6 +225,7 @@ const toggleAccordion = (evt) => {
     [...accordionButtons].forEach((btn) => {
       btn.querySelector('.footer__accordion-icon--plus').classList.add(`${activeAccordionIcon}`);
       btn.querySelector('.footer__accordion-icon--minus').classList.remove(`${activeAccordionIcon}`);
+      btn.setAttribute('aria-expanded', false);
     });
 
     if(tab.classList.contains(`${acoordionPrefix}--hidden`)){
@@ -205,6 +233,8 @@ const toggleAccordion = (evt) => {
         list.classList.add(`${acoordionPrefix}--hidden`);
       });
       tab.classList.remove(`${acoordionPrefix}--hidden`);
+      target.setAttribute('aria-expanded', true);
+
       target.querySelector('.footer__accordion-icon--plus').classList.remove(`${activeAccordionIcon}`);
       target.querySelector('.footer__accordion-icon--minus').classList.add(`${activeAccordionIcon}`);
     }else{

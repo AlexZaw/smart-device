@@ -59,7 +59,7 @@
 
 .footer__content {
   display: grid;
-  grid-template-columns: repeat(3, max-content);
+  grid-template-columns: repeat(3, auto);
   column-gap: 14.6%;
 
   @media (max-width: 1440px) {
@@ -181,10 +181,10 @@
   display: grid;
   grid-template-rows: repeat(4, max-content);
   grid-template-columns: max-content max-content;
-  grid-auto-flow: column;
   column-gap: 74px;
   font-size: 15px;
   line-height: 25px;
+
 
   @media (max-width: 1023px) {
     display: block;

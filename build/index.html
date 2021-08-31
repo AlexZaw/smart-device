@@ -9,7 +9,7 @@
   <link rel="preload" href="./fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="./fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="./fonts/roboto-v27-cyrillic-500.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="stylesheet" href="./css/style.min.css?v2">
+  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body class="page__body">
@@ -199,17 +199,17 @@
           </a>
           <span class="footer__period footer__period--links">1999-2018 SD Service Devices</span>
           <div class="footer__social">
-            <a href="#">
+            <a href="#"><span class="page__a11y-hidden">Мы в фейсбук</span>
               <svg width="27" height="27" fill="#CDCDCD" aria-hidden="true">
                 <use xlink:href="./img/sprite_auto.svg#icon-fb"></use>
               </svg>
             </a>
-            <a href="#">
+            <a href="#"> <span class="page__a11y-hidden">Мы в одноклассниках</span>
               <svg width="27" height="27" fill="#CDCDCD" aria-hidden="true">
                 <use xlink:href="./img/sprite_auto.svg#icon-ok"></use>
               </svg>
             </a>
-            <a href="#">
+            <a href="#"> <span class="page__a11y-hidden">Мы во в контакте</span>
               <svg width="27" height="27" fill="#CDCDCD" aria-hidden="true">
                 <use xlink:href="./img/sprite_auto.svg#icon-vk"></use>
               </svg>
@@ -219,7 +219,7 @@
         <nav class="footer__nav">
           <div class="footer__header-wrapper">
             <h2>Разделы сайта</h2>
-            <button class="footer__accordion-button" type="button" data-accordion="nav" aria-label="Просмотреть список" aria-expanded="false" hidden="">
+            <button class="footer__accordion-button" type="button" data-accordion="nav" aria-label="Список разделов сайта" aria-expanded="false" aria-controls="nav" hidden="">
               <svg width="16" height="16" aria-hidden="true" fill="currentColor">
                 <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--plus footer__accordion-icon--active" xlink:href="./img/sprite_auto.svg#icon-plus"></use>
                 <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--minus" xlink:href="./img/sprite_auto.svg#icon-minus">
@@ -227,10 +227,15 @@
               </svg>
             </button>
           </div>
-          <ul class="footer__accordion footer__accordion--nav">
+          <ul class="footer__accordion footer__accordion--nav" id="nav">
             <li>
               <a href="#about">
                 О компании
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Комплектующие
               </a>
             </li>
             <li>
@@ -240,22 +245,12 @@
             </li>
             <li>
               <a href="#">
-                Производство печатных плат
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Монтаж печатных плат
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Комплектующие
-              </a>
-            </li>
-            <li>
-              <a href="#">
                 Доставка
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Производство печатных плат
               </a>
             </li>
             <li>
@@ -263,12 +258,17 @@
                 Контакты
               </a>
             </li>
+            <li>
+              <a href="#">
+                Монтаж печатных плат
+              </a>
+            </li>
           </ul>
         </nav>
         <div class="footer__contacts">
           <div class="footer__header-wrapper">
             <h2>Наш офис</h2>
-            <button class="footer__accordion-button" type="button" data-accordion="contacts" aria-label="Просмотреть список" aria-expanded="false" hidden="">
+            <button class="footer__accordion-button" type="button" data-accordion="contacts" aria-label="Как с нами связаться" aria-expanded="false" aria-controls="office" hidden="">
               <svg width="16" height="16" aria-hidden="true" fill="currentColor">
                 <use width="16" height="16" class="footer__accordion-icon footer__accordion-icon--plus footer__accordion-icon--active" xlink:href="./img/sprite_auto.svg#icon-plus">
                 </use>
@@ -276,7 +276,7 @@
               </svg>
             </button>
           </div>
-          <ul class="footer__accordion footer__accordion--contacts">
+          <ul class="footer__accordion footer__accordion--contacts" id="office">
             <li>
               г. Мытищи, Олимпийский <br aria-hidden="true"> проспект, д.10
             </li>
@@ -309,12 +309,6 @@
   <template id="feedback-popup">
     <div class="popup">
       <div class="feedback-popup">
-        <button class="feedback-popup__close popup__close" type="button">
-          <svg width="17" height="17" fill="none" stroke="currentColor" aria-hidden="true">
-            <use xlink:href="./img/sprite_auto.svg#icon-cross">
-            </use>
-          </svg>
-        </button>
         <form name="feedback" action="https://echo.htmlacademy.ru" method="GET">
           <fieldset>
             <legend>
@@ -339,6 +333,12 @@
             </div>
           </fieldset>
         </form>
+        <button class="feedback-popup__close popup__close" type="button">
+          <svg width="17" height="17" fill="none" stroke="currentColor" aria-hidden="true">
+            <use xlink:href="./img/sprite_auto.svg#icon-cross">
+            </use>
+          </svg>
+        </button>
       </div>
     </div>
   </template>
