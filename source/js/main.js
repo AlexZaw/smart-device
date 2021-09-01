@@ -191,7 +191,7 @@ const checkPopupCoords = () =>{
   }
 };
 
-const popupListeners = (popup) =>{
+const setPopupListeners = (popup) =>{
   popup.querySelectorAll('.masked').forEach((el) => setMaskedInputListener(el));
   popup.querySelectorAll('.prefixed').forEach((el) => setPrefixedInputListener(el));
   popup.querySelector('[type="submit"]').addEventListener('click', onFormSubmit);
@@ -210,7 +210,7 @@ const showPopup = (evt) => {
     const popup = template.content.querySelector('.popup').cloneNode(true);
     const form = popup.querySelector('form');
     popup.classList.add('active-popup');
-    popupListeners(popup);
+    setPopupListeners(popup);
     fillForm(form);
     document.body.append(popup);
     popup.querySelector('[name="user-name"]').focus();

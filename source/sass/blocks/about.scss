@@ -26,6 +26,12 @@
 }
 
 .about__decor {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.about__decor span {
   .no-webp & {
     background-image: image-set(url("../img/about/about-mask@2x.png") 2x, url("../img/about/about-mask@1x.png") 1x);
   }
@@ -33,28 +39,7 @@
   .webp & {
     background-image: image-set(url("../img/about/about-mask@2x.webp") 2x, url("../img/about/about-mask@1x.webp") 1x);
   }
-
-  background-repeat: no-repeat;
   background-clip: text;
-  background-position: -30px 0;
-
-  @media (max-width: 1023px) {
-    .no-webp & {
-      background-image: image-set(url("../img/about/about-mask-tablet@2x.png") 2x, url("../img/about/about-mask-tablet@1x.png") 1x);
-    }
-
-    .webp & {
-      background-image: image-set(url("../img/about/about-mask-tablet@2x.webp") 2x, url("../img/about/about-mask-tablet@1x.webp") 1x);
-    }
-    background-position: -33px -2px;
-  }
-
-  @media (max-width: 767px) {
-    display: none;
-  }
-}
-
-.about__decor span {
   margin-top: 6px;
   margin-left: -17px;
   transform: scale(-1);
@@ -69,6 +54,15 @@
     margin-top: -1px;
     margin-left: -19px;
     font-size: 178.32px;
+
+    .no-webp & {
+      background-image: image-set(url("../img/about/about-mask-tablet@2x.png") 2x, url("../img/about/about-mask-tablet@1x.png") 1x);
+    }
+
+    .webp & {
+      background-image: image-set(url("../img/about/about-mask-tablet@2x.webp") 2x, url("../img/about/about-mask-tablet@1x.webp") 1x);
+    }
+    background-position: -33px -2px;
   }
 }
 
