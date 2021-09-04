@@ -1,14 +1,25 @@
+.logo__icon {
+  display: none;
+}
+
 .logo {
   display: flex;
   align-items: flex-end;
 
+
   &--header {
+    @media (min-width: 768px) {
+      .logo__icon--full {
+        display: initial;
+      }
+    }
+
     @media (max-width: 767px) {
-      .logo__text {
-        display: none;
+      .logo__icon--mobile {
+        display: initial;
       }
 
-      img {
+      svg {
         width: 38px;
         height: 38px;
       }
@@ -16,26 +27,3 @@
   }
 }
 
-.logo__text {
-  align-self: flex-end;
-  margin-left: 16px;
-}
-
-.logo__name {
-  display: block;
-  font-family: var(--font-secondary);
-  font-size: 25px;
-  font-weight: 700;
-  color: var(--c-text-secondary);
-
-  &--footer {
-    color: var(--c-logo-name-accent);
-  }
-}
-
-.logo__description {
-  font-family: "Roboto", "Arial", "Helvetica", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--c-logo-description);
-}

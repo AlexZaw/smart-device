@@ -11,7 +11,6 @@
     crossorigin>
   <link rel="preload" href="./fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2"
     crossorigin>
-  <link rel="preload" href="./fonts/roboto-v27-cyrillic-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -20,11 +19,11 @@
     <header class="header">
       <div class="header__content page__container page__container--wide">
         <a class="logo logo--header header__logo">
-          <img src="./img/logo.svg" width="52" height="52" alt="Логотип компании">
-          <div class="logo__text">
-            <span class="logo__name">Smart Device</span>
-            <span class="logo__description">умные технологии</span>
-          </div>
+          <svg width="202" height="52" aria-hidden="true">
+            <use class="logo__icon logo__icon--full" xlink:href="./img/sprite_auto.svg#icon-logo-full"></use>
+            <use class="logo__icon logo__icon--mobile" xlink:href="./img/sprite_auto.svg#icon-logo-mobile">
+            </use>
+          </svg>
         </a>
         <div class="contacts">
           <a class="contacts__link contacts__link--email" href="mailto:info@sd.ru" aria-label="Написать нам info@sd.ru">
@@ -197,12 +196,8 @@
       <div class="footer__content">
         <div class="footer__links">
           <h2 class="page__a11y-hidden">Ссылки на страницы компании</h2>
-          <a class="logo logo--footer footer__logo">
-            <img src="./img/logo.svg" width="52" height="52" alt="Логотип компании">
-            <div class="logo__text">
-              <span class="logo__name logo__name--footer">Service Device</span>
-              <span class="logo__description">умные технологии</span>
-            </div>
+          <a class="logo logo--header header__logo">
+            <img src="./img/logo-footer.svg" width="216" height="52" alt="Логотип компании">
           </a>
           <span class="footer__period footer__period--links">1999-2018 SD Service Devices</span>
           <div class="footer__social">

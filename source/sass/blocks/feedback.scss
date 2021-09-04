@@ -4,19 +4,21 @@
 
   .no-webp & {
     background-image: image-set(url("../img/feedback/feedback-bg@2x.png") 2x, url("../img/feedback/feedback-bg@1x.png") 1x),
-      url("../../img/feedback/feedback-figure-bg.svg");
+      url("../img/feedback/feedback-figure-bg.svg");
   }
 
   .webp & {
     background-image: image-set(url("../img/feedback/feedback-bg@2x.webp") 2x, url("../img/feedback/feedback-bg@1x.webp") 1x),
-      url("../../img/feedback/feedback-figure-bg.svg");
+      url("../img/feedback/feedback-figure-bg.svg");
   }
   background-repeat: no-repeat;
   background-position: 24.86% 161px, right 0;
   background-color: var(--bg-light);
 
+
   @media (max-width: 1536px) {
-    background-position: 14% 161px, right 0;
+    background-position: 10% 161px, right 0;
+    background-size: 40%, auto;
   }
 
   @media (max-width: 1440px) {

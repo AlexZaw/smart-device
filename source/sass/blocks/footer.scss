@@ -60,7 +60,7 @@
 .footer__content {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  column-gap: 14.6%;
+  column-gap: 13.6%;
 
   @media (max-width: 1440px) {
     column-gap: unset;
@@ -185,6 +185,9 @@
   font-size: 15px;
   line-height: 25px;
 
+  @media (max-width: 1439px) {
+    column-gap: 34px;
+  }
 
   @media (max-width: 1023px) {
     display: block;
