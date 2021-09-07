@@ -5,7 +5,8 @@
   background-color: var(--bg-hero);
   background-repeat: no-repeat;
   background-position: calc(100% - 177px) 258px, calc(100% - 219px) 118px, 0 0;
-  background-size: auto, auto, 100%;
+  // background-size: auto, auto, 100%;
+  background-size: auto, auto, cover;
 
   .no-webp & {
     background-image: image-set(url("../img/hero/hero-bg@2x.png") 2x, url("../img/hero/hero-bg@1x.png") 1x),
@@ -48,7 +49,8 @@
     padding-top: 17px;
     padding-bottom: 70px;
     background-position: right 92px, calc(100% + 333px) -46px, 0 0;
-    background-size: 294px 220px, 500px 483px, 100%;
+    // background-size: 294px 220px, 500px 483px, 100%;
+    background-size: 294px 220px, 500px 483px, cover;
 
     .no-webp & {
       background-image: image-set(url("../img/hero/hero-bg-mobile@2x.png") 2x, url("../img/hero/hero-bg-mobile@1x.png") 1x),
